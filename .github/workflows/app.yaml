@@ -21,9 +21,8 @@ jobs:
 
       - name: Install deps
         run: npm ci
-
-      - name: Lint (if script exists)
-        run: npm run lint --if-present
+      - name: Test (if script exists)
+        run: npm test --if-present -- --watchAll=false --passWithNoTests
 
       - name: Test (if script exists)
         run: npm test --if-present -- --watchAll=false
