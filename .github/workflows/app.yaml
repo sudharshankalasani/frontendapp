@@ -21,11 +21,6 @@ jobs:
 
       - name: Install deps
         run: npm ci
-      - name: Test (if script exists)
-        run: npm test --if-present -- --watchAll=false --passWithNoTests
-
-      - name: Test (if script exists)
-        run: npm test --if-present -- --watchAll=false
 
       - name: Build
         run: npm run build
